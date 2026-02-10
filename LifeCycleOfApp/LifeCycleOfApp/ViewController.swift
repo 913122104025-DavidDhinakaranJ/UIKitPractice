@@ -31,6 +31,12 @@ class ViewController: UIViewController {
         super.viewWillDisappear(animated)
         print("\(type(of: self)): viewWillDisappear")
     }
+    
+    //IOS sends warning when memory is low.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        print("\(type(of: self)): didReceiveMemoryWarning")
+    }
 
     @IBAction func nextScreenTapped(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
